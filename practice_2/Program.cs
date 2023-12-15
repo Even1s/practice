@@ -113,7 +113,7 @@ for (int i = 0; i < 12; i++)
         case 11: temperature2.Add("December", monthTemp); break;
     }
 }
-Dictionary<string, double> avarageTemperature = new Dictionary<string, double>();
+Dictionary<string, double> averageTemperature = new Dictionary<string, double>();
 Console.WriteLine("Average:");
 foreach (var dictionary in temperature2)
 {
@@ -123,10 +123,10 @@ foreach (var dictionary in temperature2)
         sum += dictionary.Value[i];
     }
     Console.WriteLine($"{dictionary.Key}, {sum/30.0}");
-    avarageTemperature.Add(dictionary.Key, (sum / 30.0));
+    averageTemperature.Add(dictionary.Key, (sum / 30.0));
 }
 Console.WriteLine("Sorted average:");
-var sortedTemperature = avarageTemperature.OrderBy(x => x.Value);
+var sortedTemperature = averageTemperature.OrderBy(x => x.Value);
 foreach (var dictionary in sortedTemperature)
 {
     Console.WriteLine($"{dictionary.Key}, {dictionary.Value}");
