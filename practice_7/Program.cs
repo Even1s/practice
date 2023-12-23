@@ -16,34 +16,34 @@ namespace practice_7
                     case "get by id":
                         var taskById = GetTaskById();
                         if (taskById == null) continue;
-                        Console.WriteLine($"Title: {taskById.Title}; Description: {taskById.Description}; Date: {taskById.Date}");
+                        Console.WriteLine($"Title: {taskById.Title}; Description: {taskById.Description}; Date: {taskById.Date}; Id: {taskById.Id}");
                         var editTaskById = EditTask(taskById);
                         if (editTaskById == null) continue;
-                        Console.WriteLine($"Title: {editTaskById.Title}; Description: {editTaskById.Description}; Date: {editTaskById.Date}");
+                        Console.WriteLine($"Title: {editTaskById.Title}; Description: {editTaskById.Description}; Date: {editTaskById.Date}; Id: {editTaskById.Id}");
                         continue;
                     case "get by title":
                         var taskByTitle = GetTaskByTitle();
                         if (taskByTitle == null) continue;
-                        Console.WriteLine($"Title: {taskByTitle.Title}; Description: {taskByTitle.Description}; Date: {taskByTitle.Date}");
+                        Console.WriteLine($"Title: {taskByTitle.Title}; Description: {taskByTitle.Description}; Date: {taskByTitle.Date}; Id: {taskByTitle.Id}");
                         var editTaskByTitle = EditTask(taskByTitle);
                         if (editTaskByTitle == null) continue;
-                        Console.WriteLine($"Title: {editTaskByTitle.Title}; Description: {editTaskByTitle.Description}; Date: {editTaskByTitle.Date}");
+                        Console.WriteLine($"Title: {editTaskByTitle.Title}; Description: {editTaskByTitle.Description}; Date: {editTaskByTitle.Date}; Id: {editTaskByTitle.Id}");
                         continue;
                     case "get by date":
                         var tasksByDate = GetTasksByDate();
                         if(tasksByDate!=null && tasksByDate.Count!=0) foreach (var task in tasksByDate) 
-                            Console.WriteLine($"Title: {task.Title}; Description: {task.Description}; Date: {task.Date}");
+                            Console.WriteLine($"Title: {task.Title}; Description: {task.Description}; Date: {task.Date}; Id: {task.Id}");
                         else Console.WriteLine("ERROR, not found tasks");
                         continue;
                     case "get all":
                         var tasksAll = GetTasks();
                         if(tasksAll!=null) foreach (var task in tasksAll)
-                            Console.WriteLine($"Title: {task.Title}; Description: {task.Description}; Date: {task.Date}");
+                            Console.WriteLine($"Title: {task.Title}; Description: {task.Description}; Date: {task.Date}; Id: {task.Id}");
                         else Console.WriteLine("ERROR, not found tasks");
                         continue;
                     case "add new":
                         var taskNew = AddNewTask();
-                        Console.WriteLine($"Title: {taskNew.Title}; Description: {taskNew.Description}; Date: {taskNew.Date}");
+                        Console.WriteLine($"Title: {taskNew.Title}; Description: {taskNew.Description}; Date: {taskNew.Date}; Id: {taskNew.Id}");
                         continue;
                     case "exit":
                         break;
@@ -102,7 +102,7 @@ namespace practice_7
             var tasks = GetTasks();
             try
             {
-                var task = tasks?.Single(x => x.Title == needTitle);
+                var task = tasks?.FindLast(x => x.Title == needTitle);
                 return task;
             }
             catch (Exception e)
