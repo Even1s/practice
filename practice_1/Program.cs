@@ -1,4 +1,5 @@
 ﻿// 1
+Console.WriteLine("--1--");
 int[] randomArray = new int[10];
 Random rnd = new Random();
 for (int i = 0; i < 10; i++)
@@ -8,14 +9,14 @@ for (int i = 0; i < 10; i++)
 }
 Console.WriteLine($"min: {randomArray.Min()}");
 // 2
+Console.WriteLine("--2--");
 List<int> numbers = new List<int>();
-int num;
 float sum = 0;
 int multiply = 1;
 Console.WriteLine("write numbers, 0 for exit");
 while (true)
 {
-    num = int.Parse(Console.ReadLine() ?? string.Empty);
+    var num = int.Parse(Console.ReadLine() ?? string.Empty);
     if (num == 0) break;
     numbers.Add(num);
 }
@@ -26,6 +27,7 @@ foreach (var number in numbers)
 }
 Console.WriteLine($"sum: {sum}; multiply: {multiply}; average: {sum/numbers.Count}");
 // 3
+Console.WriteLine("--3--");
 List<string> myStrings = new List<string>();
 string max = "";
 string min = "";
@@ -43,6 +45,7 @@ foreach (var str in myStrings)
 }
 Console.WriteLine($"max: {max}; min: {min};");
 // 4
+Console.WriteLine("--4--");
 Console.Write("write size of random array: ");
 int size = int.Parse(Console.ReadLine() ?? string.Empty);
 int[] limitedRandomArray = new int[size];
@@ -57,6 +60,7 @@ for (int i = 0; i < size; i++)
 }
 Console.WriteLine();
 // 5
+Console.WriteLine("--5--");
 Console.Write("write some words: ");
 string words = Console.ReadLine() ?? string.Empty;
 int count = 0;

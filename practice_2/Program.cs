@@ -1,5 +1,5 @@
 ﻿// 1
-Console.WriteLine(1);
+Console.WriteLine("--1--");
 int[] decrease = new int[100];
 for (int i = 0; i < 100; i++)
 {
@@ -8,7 +8,7 @@ for (int i = 0; i < 100; i++)
 }
 Console.WriteLine();
 // 2
-Console.WriteLine(2);
+Console.WriteLine("--2--");
 int[] odd = new int[100];
 for (int i = 0; i < 100; i++)
 {
@@ -17,7 +17,7 @@ for (int i = 0; i < 100; i++)
 }
 Console.WriteLine();
 // 3
-Console.WriteLine(3);
+Console.WriteLine("--3--");
 int[,] matrix = new int[10, 10];
 for (int i = 0; i < 10; i++)
 {
@@ -40,7 +40,7 @@ for (int i = 0; i < 10; i++)
     Console.WriteLine();
 }
 // 4
-Console.WriteLine(4);
+Console.WriteLine("--4--");
 int[,] temperature = new int[12, 30];
 double[] average = new double[12];
 Random rnd = new Random();
@@ -85,7 +85,7 @@ foreach (var num in average)
 }
 Console.WriteLine();
 // 5
-Console.WriteLine(5);
+Console.WriteLine("--5--");
 Dictionary<string, int[]> temperature2 = new Dictionary<string, int[]>();
 Random random = new Random();
 for (int i = 0; i < 12; i++)

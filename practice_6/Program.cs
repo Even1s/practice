@@ -1,4 +1,5 @@
 ﻿// 1
+Console.WriteLine("--1--");
 using StreamReader text = new StreamReader("../../../numsTask1.txt");
 text.BaseStream.Position = 0;
 string wordsString = await text.ReadLineAsync() ?? string.Empty;
@@ -9,6 +10,7 @@ foreach (var word in words)
     if (word.Length % 2 != 0) Console.WriteLine(word);
 }
 // 2
+Console.WriteLine("--2--");
 using StreamReader text1 = new StreamReader("../../../numsTask2.txt");
 text1.BaseStream.Position = 0;
 string words1 = "";
@@ -22,9 +24,13 @@ words1 = words1.Remove(words1.Length - 1);
 text1.Close();
 Console.WriteLine($"'{words1}'");
 // 3
+Console.WriteLine("--3--");
+Console.Write("Write number: ");
 int a = int.Parse(Console.ReadLine() ?? string.Empty);
 Console.WriteLine(a % 10 == 0);
 // 4
+Console.WriteLine("--4--");
+Console.Write("Write number: ");
 int b = int.Parse(Console.ReadLine() ?? string.Empty);
 if (b <= 0) return;
 int sum = 0;
@@ -36,6 +42,8 @@ do
 } while (true);
 Console.WriteLine(sum);
 // 5
+Console.WriteLine("--5--");
+Console.WriteLine("Write size of matrix:");
 int n = int.Parse(Console.ReadLine() ?? string.Empty);
 int m = int.Parse(Console.ReadLine() ?? string.Empty);
 int[,] matrix = new int[n,m+1];
@@ -63,6 +71,8 @@ for (int i = 0; i < n; i++)
     Console.WriteLine();
 }
 // 6
+Console.WriteLine("--5--");
+Console.Write("Write numbers: ");
 string numsString = Console.ReadLine() ?? string.Empty;
 if (numsString == "") return;
 float[] nums = numsString.Split(' ').ToArray().Select(float.Parse).ToArray();

@@ -1,4 +1,5 @@
 ﻿// 1
+Console.WriteLine("--1--");
 using StreamReader text = new StreamReader("../../../input.txt");
 await using StreamWriter write = new StreamWriter("../../../output.txt", false);
 text.BaseStream.Position = 0;
@@ -22,6 +23,7 @@ for (int i = 0; i < countOfTickets; i++)
 }
 text.Close(); write.Close();
 // 2
+Console.WriteLine("--2--");
 List<int> numbers;
 using (StreamReader text1 = new StreamReader("../../../nums.txt"))
 {
@@ -40,6 +42,7 @@ for (int i = 0; i < numbers.Count; i++)
 }
 write1.Close();
 // 3
+Console.WriteLine("--3--");
 List<int> height;
 using (StreamReader text2 = new StreamReader("../../../height.txt"))
 {

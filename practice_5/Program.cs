@@ -1,4 +1,5 @@
 ﻿// 1
+Console.WriteLine("--1--");
 using StreamReader text = new StreamReader("../../../numsTask1.txt");
 text.BaseStream.Position = 0;
 string numsString = await text.ReadLineAsync() ?? string.Empty;
@@ -11,6 +12,7 @@ int multiply = 1;
 for (int i = minIndex+1; i < nums.Count; i++) multiply *= nums[i];
 Console.WriteLine(multiply);
 // 2
+Console.WriteLine("--2--");
 using StreamReader text1 = new StreamReader("../../../numsTask2.txt");
 text1.BaseStream.Position = 0;
 string numsString1 = await text1.ReadLineAsync() ?? string.Empty;
@@ -30,6 +32,7 @@ for (int i = 0; i < nums1.Count; i++)
     if (i + 1 < nums1.Count) write.Write(';');
 }
 // 3
+Console.WriteLine("--3--");
 using StreamReader text2 = new StreamReader("../../../numsTask3.txt");
 text2.BaseStream.Position = 0;
 string numsString2 = await text2.ReadLineAsync() ?? string.Empty;
@@ -40,6 +43,7 @@ int sum = 0;
 for (int i = 0; i < minIndex2; i++) sum += nums2[i];
 Console.WriteLine((sum*1.0)/(minIndex2*1.0));
 // 4
+Console.WriteLine("--4--");
 using StreamReader text3 = new StreamReader("../../../numsTask4.txt");
 text3.BaseStream.Position = 0;
 string numsString3 = await text3.ReadLineAsync() ?? string.Empty;
@@ -50,6 +54,7 @@ int sum1 = 0;
 foreach (var num in maxList) sum1 += num;
 Console.WriteLine(sum1);
 // 5
+Console.WriteLine("--5--");
 using StreamReader text4 = new StreamReader("../../../numsTask5.txt");
 text4.BaseStream.Position = 0;
 string numsString4 = await text4.ReadLineAsync() ?? string.Empty;
